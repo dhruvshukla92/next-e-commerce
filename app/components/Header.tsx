@@ -6,6 +6,7 @@ import { FiSearch, FiLogOut } from "react-icons/fi";
 import { AiOutlineUser } from "react-icons/ai";
 import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/image";
+import Container from "./Container";
 
 const Header = () => {
   const { data: session } = useSession();
@@ -13,7 +14,7 @@ const Header = () => {
   const logedIn = session?.user;
   return (
     <div className="bg-bodyColor h-20">
-      <div className="h-full flex items-center md:gap-x-5 justify-between md:justify-start max-w-screen-xl mx-auto px-4 xl:px-0 py-10">
+      <Container className="h-full flex items-center md:gap-x-5 justify-between md:justify-start max-w-screen-xl mx-auto px-4 xl:px-0 py-10">
         <Logo />
         {/*Search field */}
         <div className="w-full bg-white hidden md:flex items-center gap-x-1  border-[1px] border-lightText/50 rounded-full px-4 py-1.5 focus-within:border-orange-600 group">
@@ -57,7 +58,7 @@ const Header = () => {
             {!logedIn ? "Login/Register" : "Logout"}
           </p>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };

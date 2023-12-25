@@ -1,3 +1,5 @@
+import { format } from "path";
+
 export const getProduct = async () => {
     const res = await fetch('https://fakestoreapiserver.reactbd.com/smart');
     if (!res.ok) {
@@ -5,4 +7,8 @@ export const getProduct = async () => {
     }
     return res.json();
      
+}
+
+export const calculatePercentage = (oldPrice: any, price: any) => {
+    return (!!parseFloat(price) && !!parseFloat(oldPrice) ? Math.round((parseFloat(oldPrice) - parseFloat(price)) / parseFloat(oldPrice) * 100) : 0);
 }
