@@ -10,7 +10,7 @@ import BannerText from "./BannerText";
 import { PiCaretLeftLight, PiCaretRightLight } from "react-icons/pi";
 
 const Banner = () => {
-  const NextArrow = (props: { onClick: () => void }) => {
+  const NextArrow = (props: any) => {
     const { onClick } = props;
     return (
       <div
@@ -21,7 +21,7 @@ const Banner = () => {
       </div>
     );
   };
-  const PrevArrow = (props: { onClick: () => void }) => {
+  const PrevArrow = (props: any) => {
     const { onClick } = props;
     return (
       <div
