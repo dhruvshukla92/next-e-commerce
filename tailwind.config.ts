@@ -9,12 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
+        "main-bg": "url('/bg-img.jpeg')",
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors:{
+        bodyColor:"#fbfaf7",
+        bgLight:"#1010100d",
+        darkText:"#242424",
+        lightText:"#a5a5a5",
+      }
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["winter"],
+  },
 }
 export default config
