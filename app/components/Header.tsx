@@ -10,7 +10,6 @@ import Container from "./Container";
 
 const Header = () => {
   const { data: session } = useSession();
-  console.log("session", session);
   const logedIn = session?.user;
   return (
     <div className="bg-bodyColor h-20">
